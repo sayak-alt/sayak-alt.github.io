@@ -34,14 +34,21 @@ body {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, var(--accent) 0, var(--accent-2) 40%, #1b2330 100%);
-  display: grid;
-  place-items: center;
-  color: #0b0d10;
-  font-weight: 800;
-  font-size: 28px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35), inset 0 0 60px rgba(255,255,255,0.2);
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 
 .intro h1 {
   margin: 0 0 4px;
