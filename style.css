@@ -120,3 +120,24 @@ li { margin-bottom: 6px; }
   .header { grid-template-columns: 1fr; }
   .grid-2 { grid-template-columns: 1fr; }
 }
+
+/* --- safety net for any oversized images --- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- force the avatar image to never escape --- */
+.avatar {
+  position: relative;
+}
+
+.avatar img {
+  max-width: none;        /* keep 100% width/height behavior */
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.avatar { outline: 4px solid red; }
+
